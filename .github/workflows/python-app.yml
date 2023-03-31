@@ -44,9 +44,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Login to registry
-      run: echo ${{ secrets.PERSONAL_TOKEN }} | docker login ghcr.io -u TimothyPeck --password-stdin
+      run: echo ${{ secrets.PERSONAL_TOKEN }} | docker login ghcr.io -u timothypeck --password-stdin
     - name: Build docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/TimothyPeck/tp2_indu_log:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/timothypeck/tp2_indu_log:latest
     - name: Push the image to the registry
-      run: docker push ghcr.io/TimothyPeck/tp2_indu_log:latest
+      run: docker push ghcr.io/timothypeck/tp2_indu_log:latest
 
