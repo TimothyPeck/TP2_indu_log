@@ -17,3 +17,5 @@
 ### La première étape contient le mot-clé ‘with’, a quoi sert-il ?
 
 Cela indique une dependance d'une version d'un logiciel.
+
+## mettre le package en private se fait depuis son profile!!!
