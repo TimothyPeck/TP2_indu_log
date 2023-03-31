@@ -18,4 +18,4 @@
 
 Cela indique une dependance d'une version d'un logiciel.
 
-## mettre le package en private se fait depuis son profile!!!
+**mettre le package en private se fait depuis son profile!!!**
