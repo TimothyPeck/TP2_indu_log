@@ -37,3 +37,16 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+  
+  build-docker-image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Login to registry
+      run: echo ${{ secrets.PERSONAL_TOKEN }} | docker login ghcr.io -u TimothyPeck --password-stdin
+    - name: Build docker image
+      run: docker build . --file Dockerfile --tag ghcr.io/TimothyPeck/TP2_indu_log:latest
+    - name: Push the image to the registry
+      run: docker push ghcr.io/TimothyPeck/TP2_indu_log:latest
+
