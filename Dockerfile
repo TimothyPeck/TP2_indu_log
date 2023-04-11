@@ -2,8 +2,6 @@ FROM python:3.9
 
 RUN addgroup --system nonroot && adduser --system --ingroup nonroot nonroot
 
-USER nonroot
-
 ENTRYPOINT [ "executable" ]
 
 WORKDIR /code
@@ -16,8 +14,10 @@ COPY ./README.md /code/README.md
 
 COPY ./src /code/src
 
-RUN sudo pip install /code
+RUN pip install /code
 
 COPY ./controller /code/controller
+
+USER nonroot
 
 CMD ["uvicorn", "controller.controller:app", "--host", "0.0.0.0", "--port", "80"]
