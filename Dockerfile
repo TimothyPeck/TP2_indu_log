@@ -1,5 +1,11 @@
 FROM python:3.9
 
+RUN addgroup -S nonroot && adduser -S --ingroup nonroot nonroot
+
+USER nonroot
+
+ENTRYPOINT [ "executable" ]
+
 WORKDIR /code
 
 COPY ./setup.py /code/setup.py

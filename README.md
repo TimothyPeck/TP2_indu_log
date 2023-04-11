@@ -33,3 +33,17 @@ Cela indique une dependance d'une version d'un logiciel.
 
 C'est comme des units tests mais pour savoir si un code est èret a être mis en production.
 
+## Ex 2.b
+
+### Quelle est la différence entre les sections New code et Overall Code dans l’onglet Summary ?
+
+Le `new code` est l'analyse du dernier push de code alors que `Overall Code` est l'analyse du code en entier.
+
+### Y a-t-il des Code Smells ? Si oui, combien et pour quelle(s) raisons(s)?
+
+Oui, des paramètres pas utilisés dans des fonctions, et une fonction en doublon qui devrait être supprimée/changée.
+
+### Y a-t-il des Security Hotspots ? Si oui, combien et pour quelle(s) raison(s) ?
+
+Oui, 1, utilisation de l'utilisateur par default `root` pour python dans l'action.
+
