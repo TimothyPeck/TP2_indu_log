@@ -16,7 +16,7 @@ COPY ./README.md /code/README.md
 
 COPY ./src /code/src
 
-RUN pip install /code
+RUN sudo pip install /code
 
 COPY ./controller /code/controller
 
